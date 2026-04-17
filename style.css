@@ -132,16 +132,16 @@ h1 {
     position: absolute;
     top: 50%;
     left: 110%;
-    -webkit-transform: translateY(-50%) scale(0.8) rotate(-10deg);
-    transform: translateY(-50%) scale(0.8) rotate(-10deg);
-    width: clamp(150px, 20vw, 250px);
-    height: clamp(150px, 20vw, 250px); /* Better Safari support than aspect-ratio */
+    -webkit-transform: translateY(-50%) scale(0.8);
+    transform: translateY(-50%) scale(0.8);
+    width: clamp(250px, 30vw, 400px);
+    height: clamp(250px, 30vw, 400px); /* Better Safari support than aspect-ratio */
     border-radius: 20px;
     object-fit: cover;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s ease;
-    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+    -webkit-transition: opacity 0.5s ease 30s, -webkit-transform 0.5s ease 30s, visibility 0.5s ease 30s;
+    transition: opacity 0.5s ease 30s, transform 0.5s ease 30s, visibility 0.5s ease 30s;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(255,255,255,0.2);
     z-index: 10;
     pointer-events: none;
@@ -151,8 +151,10 @@ h1 {
 .hover-name:hover .hover-profile-pic {
     opacity: 1;
     visibility: visible;
-    -webkit-transform: translateY(-50%) scale(1) rotate(5deg);
-    transform: translateY(-50%) scale(1) rotate(5deg);
+    -webkit-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+    -webkit-transition: opacity 0.5s ease 0s, -webkit-transform 0.5s ease 0s, visibility 0.5s ease 0s;
+    transition: opacity 0.5s ease 0s, transform 0.5s ease 0s, visibility 0.5s ease 0s;
 }
 
 @media (max-width: 768px) {
@@ -166,18 +168,20 @@ h1 {
         left: 0;
         top: 0;
         margin-top: 0;
-        width: 140px;
+        width: 250px;
         height: 0;
-        -webkit-transform: scale(0.8) rotate(0deg);
-        transform: scale(0.8) rotate(0deg);
-        -webkit-transition: height 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease, margin-top 0.4s ease;
-        transition: height 0.4s ease, opacity 0.4s ease, transform 0.4s ease, margin-top 0.4s ease;
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        -webkit-transition: height 0.4s ease 30s, opacity 0.4s ease 30s, -webkit-transform 0.4s ease 30s, margin-top 0.4s ease 30s;
+        transition: height 0.4s ease 30s, opacity 0.4s ease 30s, transform 0.4s ease 30s, margin-top 0.4s ease 30s;
     }
     .hover-name:hover .hover-profile-pic {
-        height: 140px;
+        height: 250px;
         margin-top: 15px;
-        -webkit-transform: scale(1) rotate(0deg);
-        transform: scale(1) rotate(0deg);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: height 0.4s ease 0s, opacity 0.4s ease 0s, -webkit-transform 0.4s ease 0s, margin-top 0.4s ease 0s;
+        transition: height 0.4s ease 0s, opacity 0.4s ease 0s, transform 0.4s ease 0s, margin-top 0.4s ease 0s;
     }
 }
 
