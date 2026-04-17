@@ -1,10 +1,12 @@
 /* style.css */
 :root {
-    --bg-color: #0d0814;
-    --text-primary: #ffffff;
-    --text-secondary: #bbaacc;
-    --accent: #a855f7;
-    --border-color: #2d1b4e;
+    --bg-color: #0B0E14;
+    --bg-secondary: #161B22;
+    --text-primary: #F0F6FC;
+    --text-secondary: #94A3B8;
+    --accent: #8B5CF6;
+    --accent-highlight: #00D4FF;
+    --border-color: #161B22;
 }
 
 * {
@@ -48,9 +50,9 @@ nav {
     width: 100%;
     top: 0;
     z-index: 100;
-    background: rgba(5, 5, 5, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(11, 14, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
@@ -198,9 +200,9 @@ h1 {
     border: 1px solid var(--border-color);
     border-radius: 50px;
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: var(--accent-highlight);
     letter-spacing: 1px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--bg-secondary);
     backdrop-filter: blur(5px);
 }
 
@@ -211,28 +213,30 @@ h1 {
     justify-content: center;
     gap: 0.6rem;
     padding: 1rem 2.5rem;
-    background-color: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-highlight));
     color: var(--bg-color);
     text-decoration: none;
     font-weight: 600;
     border-radius: 4px;
+    border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2);
 }
 
 .btn-outline {
-    background-color: transparent;
-    color: var(--accent);
-    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
 }
 
 .btn-outline:hover {
-    background-color: var(--accent);
-    color: var(--bg-color);
+    background: var(--bg-secondary);
+    color: var(--accent-highlight);
+    border-color: var(--accent-highlight);
 }
 
 /* Sections */
@@ -289,8 +293,15 @@ h1 {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: var(--accent);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background-color: var(--accent-highlight);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.timeline-content {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
 }
 
 .timeline-content h3 {
