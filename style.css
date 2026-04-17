@@ -108,6 +108,60 @@ h1 {
     letter-spacing: -0.03em;
 }
 
+/* Profile Hover Animation */
+.name-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-name {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hover-name:hover {
+    color: var(--text-secondary);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.hover-profile-pic {
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%) scale(0.8) rotate(-10deg);
+    width: clamp(150px, 20vw, 250px);
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    object-fit: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                visibility 0.5s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 2px rgba(255,255,255,0.2);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hover-name:hover ~ .hover-profile-pic {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1) rotate(5deg);
+}
+
+@media (max-width: 768px) {
+    .hover-profile-pic {
+        left: 50%;
+        top: -80%;
+        transform: translate(-50%, -50%) scale(0.8) rotate(0deg);
+    }
+    .hover-name:hover ~ .hover-profile-pic {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+}
+
 .subtitle {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
     color: var(--text-secondary);
