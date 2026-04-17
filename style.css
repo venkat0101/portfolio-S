@@ -156,13 +156,16 @@ h1 {
 @media (max-width: 768px) {
     .hover-profile-pic {
         left: 50%;
-        top: -80%;
-        -webkit-transform: translate(-50%, -50%) scale(0.8) rotate(0deg);
-        transform: translate(-50%, -50%) scale(0.8) rotate(0deg);
+        top: 100%;
+        margin-top: 10px;
+        width: 140px;
+        height: 140px;
+        -webkit-transform: translateX(-50%) scale(0.8) rotate(0deg);
+        transform: translateX(-50%) scale(0.8) rotate(0deg);
     }
     .hover-name:hover .hover-profile-pic {
-        -webkit-transform: translate(-50%, -50%) scale(1) rotate(0deg);
-        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        -webkit-transform: translateX(-50%) scale(1) rotate(0deg);
+        transform: translateX(-50%) scale(1) rotate(0deg);
     }
 }
 
