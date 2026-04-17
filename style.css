@@ -267,6 +267,18 @@ h1 {
     box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
 }
 
+.btn-gmail {
+    background: #EA4335;
+    color: white;
+    border: 1px solid #EA4335;
+}
+
+.btn-gmail:hover {
+    background: #D93025;
+    border-color: #D93025;
+    box-shadow: 0 10px 20px rgba(234, 67, 53, 0.3);
+}
+
 /* Sections */
 .section-title {
     font-size: 2.5rem;
