@@ -83,11 +83,11 @@ nav {
 
 /* Layout */
 .section {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 6rem 5%;
+    padding: 4rem 5%;
 }
 
 .container {
@@ -167,14 +167,14 @@ h1 {
 .subtitle {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 300;
 }
 
 .tags {
     display: flex;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
@@ -260,8 +260,8 @@ h1 {
 
 /* Sections */
 .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
     font-weight: 600;
     position: relative;
     display: inline-block;
