@@ -1,10 +1,10 @@
 /* style.css */
 :root {
-    --bg-color: #050505;
+    --bg-color: #0d0814;
     --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --accent: #ffffff;
-    --border-color: #333333;
+    --text-secondary: #bbaacc;
+    --accent: #a855f7;
+    --border-color: #2d1b4e;
 }
 
 * {
@@ -41,7 +41,7 @@ body {
 /* Navigation */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 2rem 5%;
     position: fixed;
@@ -154,18 +154,28 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .name-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .hover-profile-pic {
-        left: 50%;
-        top: 100%;
-        margin-top: 10px;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: 0;
         width: 140px;
-        height: 140px;
-        -webkit-transform: translateX(-50%) scale(0.8) rotate(0deg);
-        transform: translateX(-50%) scale(0.8) rotate(0deg);
+        height: 0;
+        -webkit-transform: scale(0.8) rotate(0deg);
+        transform: scale(0.8) rotate(0deg);
+        -webkit-transition: height 0.4s ease, opacity 0.4s ease, -webkit-transform 0.4s ease, margin-top 0.4s ease;
+        transition: height 0.4s ease, opacity 0.4s ease, transform 0.4s ease, margin-top 0.4s ease;
     }
     .hover-name:hover .hover-profile-pic {
-        -webkit-transform: translateX(-50%) scale(1) rotate(0deg);
-        transform: translateX(-50%) scale(1) rotate(0deg);
+        height: 140px;
+        margin-top: 15px;
+        -webkit-transform: scale(1) rotate(0deg);
+        transform: scale(1) rotate(0deg);
     }
 }
 
